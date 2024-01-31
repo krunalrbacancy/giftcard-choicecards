@@ -1,0 +1,351 @@
+:root {
+    --primary-color: #1E2A3B;
+    --green-color: #008675;
+    --grey1: #E8EEED;
+    --grey1-rgb: rgb(232, 238, 237);
+    --grey2: #E8F4F2;
+    --grey3: #F6F8FC;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+img {
+    max-width: 100%;
+}
+a {
+    transition: all 0.6s ease-in-out;
+}
+h1, .h1 {
+    font-size: 4rem; /* 64px */
+}
+h2, .h2 {
+    font-size: 3.5rem; /* 56px */
+}
+h3, .h3 {
+    font-size: 3rem; /* 48px */
+}
+h4, .h4 {
+    font-size: 2.25rem; /* 36px */
+}
+h5, .h5 {
+    font-size: 1.5rem; /* 24px */
+}
+h6, .h6 {
+    font-size: 1.25rem; /* 20px */
+}
+.text-green {
+    color: var(--green-color);
+}
+.bg-green {
+    background-color: var(--green-color);
+}
+
+.btn {
+    background-color: var(--green-color);
+    color: #ffffff;
+    padding: 1rem 1.875rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 5.313rem;
+    display: inline-block;
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+.arrow-btn {
+    background-color: var(--green-color);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    display: inline-block;
+    transition: all 0.6s ease-in-out;
+}
+.arrow-btn:hover {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+}
+.arrow-btn img {
+    transform: rotate(0deg);
+    transition: all 0.6s ease-in-out;
+}
+.arrow-btn:hover img {
+    transform: rotate(45deg);
+    transition: all 0.6s ease-in-out;
+}
+
+@media (min-width: 2000px) {
+    .container-2xl {
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1220px;
+    }
+}
+
+/* Header CSS Start */
+.header {
+    position: relative;
+    margin-top: 2.5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+.header .navbar {
+    background-color: var(--grey1);
+    padding: 0.938rem 1.563rem;
+}
+.header.fixed {
+    position: fixed;
+    margin-top: 1rem;
+}
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+.header.header.fixed .navbar {
+    background-color: rgba(var(--grey1-rgb), 0.95);
+    animation: slideDown 0.35s ease-out;
+    box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(1.25rem);
+}
+.navbar-nav .nav-item:not(:last-child) {
+    margin-right: 1.875rem;
+}
+.nav-item .nav-link {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0;
+    display: inline-block;
+}
+.nav-item .nav-link:hover {
+    color: var(--green-color);
+}
+.nav-link.dropdown-toggle::after {
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../assets/images/icons/arrow-down.svg') no-repeat center / contain;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+.navbar-nav .dropdown-menu {
+    top: calc(100% + 0.625rem);
+    padding: 1.563rem 1.875rem;
+    border: none;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.16);
+    border-radius: 0.5rem;
+}
+.navbar-nav .dropdown-menu:before {
+    content: "";
+    position: absolute;
+    top: -0.563rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.563rem 1.125rem 0.563rem;
+    border-color: transparent transparent #FFFFFF transparent;
+}
+.dropdown-menu li:not(:last-child) {
+    margin-bottom: 1.25rem;
+}
+.dropdown-menu .dropdown-item {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.dropdown-menu .dropdown-item:hover {
+    color: var(--green-color);
+}
+@media (max-width: 991px) {
+    .navbar-toggler {
+        border: none;
+    }
+    .navbar-toggler-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .header .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        width: 230px;
+        height: auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.16);
+        padding: 1.4rem;
+        border-radius: 1.2rem;
+    }
+    .navbar-nav .nav-item:not(:last-child) {
+        margin: 0 0 0.6rem;
+    }
+    .nav-item .nav-link {
+        font-size: 1rem;
+    }
+    .nav-link.dropdown-toggle::after {
+        width: 1rem;
+        height: 1rem;
+    }
+    .navbar-nav .dropdown-menu {
+        padding: 1rem;
+        box-shadow: none;
+        background-color: var(--grey2);
+        margin-top: 0.5rem;
+    }
+    .dropdown-menu li:not(:last-child) {
+        margin-bottom: 0.8rem;
+    }
+    .dropdown-menu .dropdown-item {
+        font-size: 0.8rem;
+    }
+}
+/* Header CSS End */
+
+/* Gift Card CSS Start */
+.gift-cards {
+    margin-top: 3.25rem;
+}
+.gift-card-item {
+    background-color: var(--grey2);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+.gift-card-item .arrow-btn {
+    margin-top: 2.25rem;
+}
+@media (max-width: 767px) {
+    .gift-cards .container > .row {
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+    .gift-cards .row > .col-md-6 {
+        width: 75%;
+    }
+}
+/* Gift Card CSS End */
+
+/* Our Partners CSS Start */
+.our-partners {
+    margin-top: 3.5rem;
+    background-color: var(--grey3);
+    padding: 3.125rem 0;
+}
+.our-partners h6 {
+    color: #475569;
+}
+.our-partner-item {
+    padding-top: 46%;
+    position: relative;
+    overflow: hidden;
+}
+.our-partner-item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+}
+/* Our Partners CSS End */
+
+/* GiftCard Offer CSS Start */
+.giftcard-offer {
+    background-color: var(--grey2);
+    padding: 5rem 0;
+}
+.giftcard-offer-content h4 {
+    line-height: 1;
+}
+.giftcard-offer-content h5 {
+    color: #64748B;
+    line-height: 1.4;
+}
+.giftcard-offer-slider .owl-nav {
+    text-align: center;
+    margin-top: 3.125rem;
+}
+.giftcard-offer-slider .owl-nav button:is(.owl-next, .owl-prev) {
+    background-color: rgba(0, 134, 117, 0.1);
+    padding: 0.875rem 1.125rem !important;
+    border: 2px solid var(--green-color);
+    border-radius: 5.313rem;
+    margin: 0 0.75rem;
+    transition: all 0.6s ease-in-out;
+}
+.giftcard-offer-slider .owl-nav button:is(.owl-next, .owl-prev):hover {
+    background-color: rgba(0, 134, 117, 0.2);
+    transition: all 0.6s ease-in-out;
+}
+.giftcard-offer-slider .owl-nav button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+/* GiftCard Offer CSS End */
+
+/* Footer CSS Start */
+.footer .nav a:hover {
+    text-decoration: underline !important;
+}
+/* Footer CSS Start */
+
+/* Responsive CSS Start */
+@media (max-width: 1400px) {
+    html { font-size: 14px; }
+}
+@media (max-width: 1199px) {
+    h1, .h1 {
+        font-size: 3.571rem; /* 50px */
+    }
+    h2, .h2 {
+        font-size: 3rem; /* 42px */
+    }
+    h3, .h3 {
+        font-size: 2.429rem; /* 34px */
+    }
+    h4, .h4 {
+        font-size: 1.714rem; /* 24px */
+    }
+    h5, .h5 {
+        font-size: 1.286rem; /* 18px */
+    }
+    h6, .h6 {
+        font-size: 1rem; /* 14px */
+    }
+
+    img {
+        width: auto;
+        height: auto;
+    }
+}
+/* Responsive CSS End */
