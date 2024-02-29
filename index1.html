@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam&display=swap" rel="stylesheet">
 
     <!-- Bootstrap 5.3.2 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
     <!-- Owl Carousel v2.3.4 -->
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" crossorigin="anonymous">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./assets/css/owl.carousel.min.css">
 
     <!-- Custom Stylesheet v1 -->
-    <link rel="stylesheet" href="./assets/css/choicecards.css?ver=1.01" media="screen">
+    <link rel="stylesheet" media="all" href="./assets/css/choicecards-min.css?ver=1.02">
 </head>
 <body>
     <!-- Header Block Start -->
@@ -78,10 +78,14 @@
                                         <h4 class="fw-bold lh-sm mb-0">Multi-Brand<br> Gift Cards</h4>
                                         <h6 class="text-grey-dark opacity-70 mt-3 mb-0">Surprise and delight someone with the gift of choice.</h6>
                                     </div>
-                                    <a class="arrow-btn" href="https://dev.anycard.ca/choicecards"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" loading="lazy" alt="Arrow Right Up"></a>
+                                    <a class="arrow-btn" href="https://dev.anycard.ca/choicecards"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" alt="Arrow Right Up"></a>
                                 </div>
-                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto">
-                                    <img src="./assets/images/gift-card/gift-card-1.png" width="310" height="364" loading="lazy" alt="Buy">
+                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto text-center">
+                                    <picture>
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-1.webp" type="image/webp">
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-1.png" type="image/png">
+                                        <img src="./assets/images/gift-card-compressed/gift-card-1.png" loading="lazy" width="218" height="301" alt="Buy">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -95,10 +99,14 @@
                                         <h4 class="fw-bold lh-sm mb-0">Multi-Brand<br> Gift Cards</h4>
                                         <h6 class="text-grey-dark opacity-70 mt-3 mb-0">Have a card? Redeem for your choice of popular brands.</h6>
                                     </div>
-                                    <a class="arrow-btn" href="https://dev.anycard.ca/choice"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" loading="lazy" alt="Arrow Right Up"></a>
+                                    <a class="arrow-btn" href="https://dev.anycard.ca/choice"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" alt="Arrow Right Up"></a>
                                 </div>
-                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto">
-                                    <img src="./assets/images/gift-card/gift-card-2.png" width="310" height="364" loading="lazy" alt="Redeem">
+                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto text-center">
+                                    <picture>
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-2.webp" type="image/webp">
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-2.png" type="image/png">
+                                        <img src="./assets/images/gift-card-compressed/gift-card-2.png" loading="lazy" width="310" height="294" alt="Redeem">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -112,10 +120,14 @@
                                         <h4 class="fw-bold lh-sm mb-0">Local<br> Gift Cards</h4>
                                         <h6 class="text-grey-dark opacity-70 mt-3 mb-0">We offer gift cards for local neighbourhood businesses.</h6>
                                     </div>
-                                    <a class="arrow-btn" href="https://dev.anycard.ca/welcome"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" loading="lazy" alt="Arrow Right Up"></a>
+                                    <a class="arrow-btn" href="https://dev.anycard.ca/welcome"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" alt="Arrow Right Up"></a>
                                 </div>
-                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto">
-                                    <img src="./assets/images/gift-card/gift-card-3.png" width="310" height="364" loading="lazy" alt="Explore">
+                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto text-center">
+                                    <picture>
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-3.webp" type="image/webp">
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-3.png" type="image/png">
+                                        <img src="./assets/images/gift-card-compressed/gift-card-3.png" loading="lazy" width="276" height="254" alt="Explore">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -129,10 +141,14 @@
                                         <h4 class="fw-bold lh-sm mb-0">For<br> Business</h4>
                                         <h6 class="text-grey-dark opacity-70 mt-3 mb-0">Looking for bulk orders? We’ve got you covered.</h6>
                                     </div>
-                                    <a class="arrow-btn" href="./purchase-for-business.html"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" loading="lazy" alt="Arrow Right Up"></a>
+                                    <a class="arrow-btn" href="./purchase-for-business.html"><img src="./assets/images/icons/arrow-right-up.svg" width="24" height="24" alt="Arrow Right Up"></a>
                                 </div>
-                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto">
-                                    <img src="./assets/images/gift-card/gift-card-4.png" width="310" height="364" loading="lazy" alt="Purchase">
+                                <div class="col-lg-7 col-md-10 order-0 order-lg-1 mx-auto text-center">
+                                    <picture>
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-4.webp" type="image/webp">
+                                        <source srcset="./assets/images/gift-card-compressed/gift-card-4.png" type="image/png">
+                                        <img src="./assets/images/gift-card-compressed/gift-card-4.png" loading="lazy" width="308" height="194" alt="Purchase">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -278,24 +294,11 @@
                             </div>
                         </div>
                         <div class="col-lg-5 col-md-6 order-md-1">
-                            <div class="giftcard-offer-item">
-                                <img class="owl-lazy" data-src="./assets/images/gift-card-offer/offer-1.png" loading="lazy" alt="Gift Card Offer">
-                            </div>
-                            <div class="owl-nav"></div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-between">
-                        <div class="col-md-6 mb-5 mb-md-0">
-                            <div class="giftcard-offer-content">
-                                <h2 class="fw-semibold mb-4 lh-sm"><span class="d-block h1 fw-bold">20% Off</span> on Singlebrand Card exclusively*</h2>
-                                <h5 class="fw-normal mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-                                <a href="#" class="btn">Grab Now!</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-6 order-md-1">
-                            <div class="giftcard-offer-item">
-                                <img class="owl-lazy" data-src="./assets/images/gift-card-offer/offer-1.png" loading="lazy" alt="Gift Card Offer">
-                            </div>
+                            <picture class="giftcard-offer-item">
+                                <source srcset="./assets/images/gift-card-offer/offer-1.webp" type="image/webp">
+                                <source srcset="./assets/images/gift-card-offer/offer-1.png" type="image/png">
+                                <img class="owl-lazy" data-src="./assets/images/gift-card-offer/offer-1.png" width="493" height="308" alt="Gift Card Offer">
+                            </picture>
                             <div class="owl-nav"></div>
                         </div>
                     </div>
@@ -326,12 +329,12 @@
     <!-- Footer Block End -->
     
     <!-- jQuery v3.7.1 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <!-- Bootstrap v5.3.2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer crossorigin="anonymous"></script>
     <!-- Owl Carousel v2.3.4 -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js" defer></script>
     <!-- Custom Script -->
-    <script src="./assets/js/choicecard.js?ver=1.01"></script>
+    <script src="./assets/js/choicecard.js?ver=1.02"></script>
 </body>
 </html>
